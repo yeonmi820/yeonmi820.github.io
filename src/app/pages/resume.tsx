@@ -301,13 +301,13 @@ export function Resume() {
                         <>
                           Programming: C, C++ <br />
                           Engines: Unity, UE5 - Editor <br />
-                          Tools: Git
+                          Tools: Git, Jira
                         </>
                       ) : (
                         <>
                           编程：C、C++ <br />
                           引擎：Unity、UE5 - 编辑器 <br />
-                          工具：Git
+                          工具：Git、Jira
                         </>
                       )}
                     </div>
@@ -335,6 +335,46 @@ export function Resume() {
                       {t.resume.skillsContent.design}
                     </p>
                   </div>
+                </div>
+              </section>
+
+              {/* Awards */}
+              <section>
+                <h3
+                  className="mb-4 pb-3 border-b border-border uppercase tracking-wider"
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontSize: "0.75rem",
+                    fontWeight: 600,
+                    color: "var(--foreground)",
+                    letterSpacing: "0.1em",
+                  }}
+                >
+                  {t.resume.awards}
+                </h3>
+
+                <div>
+                  <h4
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: "0.875rem",
+                      fontWeight: 600,
+                      color: "var(--foreground)",
+                    }}
+                  >
+                    PHOBOS
+                  </h4>
+                  <p
+                    className="text-muted-foreground mt-1"
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: "0.75rem",
+                    }}
+                  >
+                    {language === "en"
+                      ? "Best Theme — Spooky Jam 2025"
+                      : "最佳主题 — Spooky Jam 2025"}
+                  </p>
                 </div>
               </section>
             </motion.div>
@@ -450,8 +490,8 @@ export function Resume() {
                       }}
                     >
                       {language === "en"
-                        ? "Title of Digital Game Project"
-                        : "数字游戏项目名称"}
+                        ? "MPC"
+                        : "MPC"}
                     </h4>
                     <span
                       className="text-muted-foreground"
@@ -472,8 +512,8 @@ export function Resume() {
                     }}
                   >
                     {language === "en"
-                      ? "Game Designer & Gameplay Programmer | Academic Project"
-                      : "游戏设计师与游戏玩法程序员 | 学术项目"}
+                      ? "Game Designer | A Turn-based Puzzle Game"
+                      : "游戏设计 | 课程项目"}
                   </p>
                   <ul className="list-disc list-outside ml-5 space-y-2">
                     <li
@@ -485,8 +525,8 @@ export function Resume() {
                       }}
                     >
                       {language === "en"
-                        ? "Designed and implemented core gameplay mechanics, transitioning initial paper prototypes into fully playable digital systems."
-                        : "设计并实现核心游戏机制，将最初的纸上原型转化为完全可玩的数字系统。"}
+                        ? "Contributed to designing core gameplay mechanics, transitioning initial paper prototypes into fully playable digital systems."
+                        : "参与了设计并实现核心游戏机制，将最初的纸上原型转化为完全可玩的PC demo。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -509,7 +549,7 @@ export function Resume() {
                       }}
                     >
                       {language === "en"
-                        ? "Optimized game logic and integrated assets, ensuring smooth performance across target platforms."
+                        ? "Optimized level design and integrated assets, ensuring smooth and seamless guidance to gameplay."
                         : "优化游戏逻辑并集成资源，确保在目标平台上流畅运行。"}
                     </li>
                   </ul>

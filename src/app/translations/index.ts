@@ -10,7 +10,7 @@ export const translations = {
     hero: {
       greeting: 'Yanmei Cui',
       tagline: 'Game Designer & Developer',
-      description: 'Creating immersive gaming experiences that blend innovative mechanics with compelling narratives.',
+      description: 'Blending innovative mechanics with compelling stories.',
       viewWork: 'View Work',
       resume: 'Resume'
     },
@@ -55,12 +55,13 @@ export const translations = {
       downloadPDF: 'Download PDF',
       subtitle: 'Game Design and Technology',
       location: 'Gothenburg, Sweden',
-      summary: 'A multidisciplinary game developer combining creative design with robust technical implementation. I want to bridge the gap between gameplay design and software engineering to create compelling, end-to-end interactive experiences.',
+      summary: 'A multidisciplinary game designer combining creative design with robust technical implementation. I want to bridge the gap between gameplay design and software engineering to create compelling, end-to-end interactive experiences.',
       education: 'Education',
       competencies: 'Competencies',
       languagesSkill: 'Languages',
       enginesTools: 'Engines & Tools',
       designWorkflows: 'Design & Workflows',
+      awards: 'Awards',
       selectedProjects: 'Selected Projects',
       experience: 'Experience',
       educationContent: {
@@ -146,6 +147,7 @@ export const translations = {
       languagesSkill: '编程语言',
       enginesTools: '引擎与工具',
       designWorkflows: '设计与工作流',
+      awards: '获奖情况',
       selectedProjects: '精选项目',
       experience: '工作经历',
       educationContent: {

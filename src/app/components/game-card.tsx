@@ -1,11 +1,15 @@
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Link } from "react-router";
+import { useState } from "react";
 
 interface Game {
   id: number;
   title: string;
+  slug: string;
   description: string;
   image: string;
+  hoverImage: string;
   tags: string[];
   year: string;
   role: string;
@@ -17,6 +21,8 @@ interface GameCardProps {
 }
 
 export function GameCard({ game, index }: GameCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -24,32 +30,39 @@ export function GameCard({ game, index }: GameCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="mb-6 overflow-hidden rounded">
-        <motion.div
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.4 }}
-        >
-          <ImageWithFallback
-            src={game.image}
-            alt={game.title}
-            className="w-full aspect-[4/3] object-cover"
-          />
-        </motion.div>
-      </div>
+      <Link to={`/work/${game.slug}`} className="block">
+        <div className="mb-6 overflow-hidden rounded relative">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+          >
+            <ImageWithFallback
+              src={isHovered ? game.hoverImage : game.image}
+              alt={game.title}
+              className="w-full aspect-[4/3] object-cover transition-opacity duration-500"
+            />
+          </motion.div>
+        </div>
+      </Link>
 
       <div className="space-y-3">
         <div className="flex items-baseline justify-between gap-4">
-          <h3
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '1.5rem',
-              fontWeight: 500,
-              color: 'var(--foreground)'
-            }}
-          >
-            {game.title}
-          </h3>
+          <Link to={`/work/${game.slug}`}>
+            <h3
+              className="hover:text-foreground/70 transition-colors cursor-pointer"
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: '1.5rem',
+                fontWeight: 500,
+                color: 'var(--foreground)'
+              }}
+            >
+              {game.title}
+            </h3>
+          </Link>
           <span
             className="text-muted-foreground shrink-0"
             style={{
