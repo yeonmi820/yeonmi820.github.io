@@ -14,9 +14,9 @@ const games = [
     description: "High-speed cyberpunk racing through neon-lit megacities",
     image: "https://images.unsplash.com/photo-1767838533907-294330d1228b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjByYWNpbmclMjBuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NzYxMDg2NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
     hoverImage: "https://images.unsplash.com/photo-1614854262318-831574f15f1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjeWJlcnB1bmslMjBuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NzYxMDg2NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Racing", "Cyberpunk", "Multiplayer"],
+    tags: ["Puzzle", "Cyberpunk", "Multiplayer"],
     year: "2025",
-    role: "Lead Developer"
+    role: "Game Designer"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const games = [
     description: "Open-world fantasy RPG with dynamic magic systems",
     image: "https://images.unsplash.com/photo-1597647186026-dfb1baab30e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW50YXN5JTIwZ2FtZSUyMGxhbmRzY2FwZSUyMG1hZ2ljfGVufDF8fHx8MTc3NjEwODY2NHww&ixlib=rb-4.1.0&q=80&w=1080",
     hoverImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxmYW50YXN5JTIwbGFuZHNjYXBlfGVufDF8fHx8MTc3NjEwODY2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["RPG", "Fantasy", "Open World"],
+    tags: ["Area Control", "Cards", "Turn-based"],
     year: "2025",
     role: "Game Designer"
   },
@@ -38,7 +38,7 @@ const games = [
     hoverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwY29kZXxlbnwxfHx8fDE3NzYxMDg2NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Game Engine", "C++", "Vulkan"],
     year: "2026",
-    role: "Technical Lead"
+    role: "Developer"
   },
   {
     id: 4,
@@ -47,9 +47,9 @@ const games = [
     description: "Stealth action game set in a dystopian future",
     image: "https://images.unsplash.com/photo-1653850405111-11329574789a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGVhbHRoJTIwYWN0aW9uJTIwZHlzdG9waWFufGVufDF8fHx8MTc3NjEwODY2NXww&ixlib=rb-4.1.0&q=80&w=1080",
     hoverImage: "https://images.unsplash.com/photo-1511512578047-dfb367046420?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxkeXN0b3BpYW4lMjBmdXR1cmV8ZW58MXx8fHwxNzc2MTA4NjY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Stealth", "Action", "Story-Driven"],
+    tags: ["Puzzle", "Step by Step", "Story-Driven"],
     year: "2024",
-    role: "Creative Director"
+    role: "Creative Designer"
   },
   {
     id: 5,
@@ -58,9 +58,9 @@ const games = [
     description: "Space exploration and survival in procedural galaxies",
     image: "https://images.unsplash.com/photo-1775549199902-d738320d9256?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGFjZSUyMGV4cGxvcmF0aW9uJTIwbmVidWxhfGVufDF8fHx8MTc3NjEwODY2NXww&ixlib=rb-4.1.0&q=80&w=1080",
     hoverImage: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzcGFjZSUyMG5lYnVsYXxlbnwxfHx8fDE3NzYxMDg2NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Space", "Survival", "Procedural"],
+    tags: ["Space", "Survival", "Story-Driven"],
     year: "2023",
-    role: "Solo Developer"
+    role: "Game Designer"
   },
   {
     id: 6,
@@ -69,9 +69,9 @@ const games = [
     description: "Roguelike dungeon crawler with endless replayability",
     image: "https://images.unsplash.com/photo-1773432661163-351c473345e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkdW5nZW9uJTIwZGFyayUyMGZhbnRhc3klMjBnYW1lfGVufDF8fHx8MTc3NjEwODY2NXww&ixlib=rb-4.1.0&q=80&w=1080",
     hoverImage: "https://images.unsplash.com/photo-1578632767115-351597cf2477?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxkYXJrJTIwZmFudGFzeXxlbnwxfHx8fDE3NzYxMDg2NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Roguelike", "Dungeon Crawler", "Indie"],
-    year: "2023",
-    role: "Game Developer"
+    tags: ["It Takes Two", "Co-op", "Mechanics"],
+    year: "2025",
+    role: "Game Research"
   }
 ];
 

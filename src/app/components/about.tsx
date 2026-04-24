@@ -9,14 +9,14 @@ export function About() {
 
   const skills = [
     {
-      icon: Code2,
-      title: t.about.skills.development.title,
-      description: t.about.skills.development.description
-    },
-    {
       icon: Palette,
       title: t.about.skills.design.title,
       description: t.about.skills.design.description
+    },
+    {
+      icon: Code2,
+      title: t.about.skills.development.title,
+      description: t.about.skills.development.description
     },
     {
       icon: Trophy,
@@ -30,12 +30,6 @@ export function About() {
     }
   ];
 
-  const stats = [
-    { value: "8+", label: t.about.stats.years },
-    { value: "15+", label: t.about.stats.games },
-    { value: "5M+", label: t.about.stats.players },
-    { value: "12", label: t.about.stats.awards }
-  ];
   return (
     <section id="about" className="relative px-6 py-24">
       <div className="max-w-7xl mx-auto">
@@ -58,56 +52,19 @@ export function About() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="space-y-6 text-foreground/80" style={{ fontFamily: 'var(--font-body)', fontSize: '1.0625rem', lineHeight: '1.7' }}>
-              <p>{t.about.paragraph1}</p>
-              <p>{t.about.paragraph2}</p>
-              <p>{t.about.paragraph3}</p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 gap-6"
-          >
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card border border-border rounded"
-              >
-                <div
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: '2.5rem',
-                    fontWeight: 500,
-                    color: 'var(--foreground)',
-                    lineHeight: '1'
-                  }}
-                >
-                  {stat.value}
-                </div>
-                <div
-                  className="text-muted-foreground mt-2"
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.875rem'
-                  }}
-                >
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 max-w-4xl"
+        >
+          <div className="space-y-6 text-foreground/80" style={{ fontFamily: 'var(--font-body)', fontSize: '1.0625rem', lineHeight: '1.7' }}>
+            <p>{t.about.paragraph1}</p>
+            <p>{t.about.paragraph2}</p>
+            <p>{t.about.paragraph3}</p>
+          </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skills.map((skill, index) => (

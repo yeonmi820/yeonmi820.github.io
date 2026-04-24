@@ -16,8 +16,47 @@ export function Resume() {
   const t = translations[language];
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-background">
-      <Navigation />
+    <>
+      <style>{`
+        @page {
+          size: A4;
+          margin: 20mm;
+        }
+
+        @media print {
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+          }
+
+          nav, footer, button {
+            display: none !important;
+          }
+
+          .print-hide {
+            display: none !important;
+          }
+
+          body, html {
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
+          main {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+
+          .max-w-4xl {
+            max-width: 100% !important;
+          }
+        }
+      `}</style>
+      <div className="relative min-h-screen overflow-x-hidden bg-background">
+        <Navigation />
 
       <main className="pt-32 pb-24 px-6">
         <div className="max-w-4xl mx-auto">
@@ -30,7 +69,7 @@ export function Resume() {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 print-hide"
               style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "0.9375rem",
@@ -68,7 +107,8 @@ export function Resume() {
               </div>
 
               <button
-                className="px-6 py-3 border border-border text-foreground rounded hover:bg-muted transition-colors inline-flex items-center gap-2"
+                onClick={() => window.print()}
+                className="px-6 py-3 border border-border text-foreground rounded hover:bg-muted transition-colors inline-flex items-center gap-2 cursor-pointer"
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.9375rem",
@@ -103,7 +143,7 @@ export function Resume() {
                 gusyancu@student.gu.se
               </div>
               <div
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 print-hide"
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.875rem",
@@ -113,14 +153,14 @@ export function Resume() {
                 linkedin.com/in/yeonmi-lkin
               </div>
               <div
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 print-hide"
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.875rem",
                 }}
               >
                 <ExternalLink className="w-4 h-4" />
-                yeonmi820.github.io
+                https://yeonmi820.itch.io/
               </div>
             </div>
 
@@ -478,7 +518,7 @@ export function Resume() {
                   </ul>
                 </div>
 
-                {/* Project 2: Digital Game */}
+{/* Project 2: Digital Game */}
                 <div className="mb-8">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
                     <h4
@@ -489,9 +529,7 @@ export function Resume() {
                         color: "var(--foreground)",
                       }}
                     >
-                      {language === "en"
-                        ? "MPC"
-                        : "MPC"}
+                      {language === "en" ? "MPC" : "MPC"}
                     </h4>
                     <span
                       className="text-muted-foreground"
@@ -512,8 +550,8 @@ export function Resume() {
                     }}
                   >
                     {language === "en"
-                      ? "Game Designer | A Turn-based Puzzle Game"
-                      : "游戏设计 | 课程项目"}
+                      ? "A Turn-based Puzzle Game｜Game Designer"
+                      : "回合制解谜游戏｜游戏设计师"}
                   </p>
                   <ul className="list-disc list-outside ml-5 space-y-2">
                     <li
@@ -525,8 +563,8 @@ export function Resume() {
                       }}
                     >
                       {language === "en"
-                        ? "Contributed to designing core gameplay mechanics, transitioning initial paper prototypes into fully playable digital systems."
-                        : "参与了设计并实现核心游戏机制，将最初的纸上原型转化为完全可玩的PC demo。"}
+                        ? "Designed core mechanics for a deterministic puzzle game, successfully translating initial paper prototypes into a digital step-by-step simulation focused on planning and execution."
+                        : "设计了确定性解谜游戏的核心机制，将最初的纸面原型成功转化为聚焦于“预计划与执行”的数字步进式模拟系统。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -537,8 +575,8 @@ export function Resume() {
                       }}
                     >
                       {language === "en"
-                        ? "Collaborated within a cross-functional team utilizing Scrum methodologies to iterate rapidly based on playtest feedback."
-                        : "在使用Scrum方法的跨职能团队中协作，根据玩家测试反馈快速迭代。"}
+                        ? "Developed an indirect control system using modular \"mask\" abilities, crafting progressive level designs that guide players to solve puzzles through emergent systemic interactions."
+                        : "开发了基于模块化“面具”的间接控制系统，通过渐进式的关卡设计，引导玩家利用涌现式系统交互来解决谜题。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -549,8 +587,8 @@ export function Resume() {
                       }}
                     >
                       {language === "en"
-                        ? "Optimized level design and integrated assets, ensuring smooth and seamless guidance to gameplay."
-                        : "优化游戏逻辑并集成资源，确保在目标平台上流畅运行。"}
+                        ? "Iterated rapidly within a cross-functional Scrum team, utilizing playtest feedback to balance the difficulty curve and seamlessly integrate game assets."
+                        : "在跨职能Scrum团队中进行高频敏捷迭代，利用玩家试玩反馈来平滑难度曲线，并无缝集成游戏美术与资产。"}
                     </li>
                   </ul>
                 </div>
@@ -579,8 +617,8 @@ export function Resume() {
                       }}
                     >
                       {language === "en"
-                        ? "Gameplay Design"
-                        : "游戏设计"}
+                        ? "Tabletop Game"
+                        : "桌游设计"}
                     </span>
                   </div>
                   <p
@@ -787,6 +825,7 @@ export function Resume() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
