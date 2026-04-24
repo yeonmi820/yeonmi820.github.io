@@ -65,7 +65,7 @@ export function Resume() {
             box-sizing: border-box !important;
             padding: 11mm 5mm 6mm 5mm !important;
             margin: 0 auto !important;
-            zoom: 0.95;
+            zoom: 0.90;
             transform-origin: top center;
             background: var(--background) !important;
           }
@@ -156,8 +156,8 @@ export function Resume() {
           }
 
           .px-6 {
-            padding-left: 0.5rem !important;
-            padding-right: 0.5rem !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
           }
 
           ul {
