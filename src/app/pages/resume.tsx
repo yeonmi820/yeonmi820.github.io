@@ -63,11 +63,19 @@ export function Resume() {
             max-width: 210mm !important;
             min-height: 297mm !important;
             box-sizing: border-box !important;
-            padding: 7mm !important;
+            padding: 11mm 5mm 6mm 5mm !important;
             margin: 0 auto !important;
             zoom: 0.84;
             transform-origin: top center;
             background: var(--background) !important;
+          }
+
+          .resume-header {
+            margin-bottom: 1mm !important;
+          }
+
+          .resume-summary {
+            margin-bottom: 3mm !important;
           }
 
           .resume-main-grid {
@@ -75,6 +83,7 @@ export function Resume() {
             grid-template-columns: minmax(0, 0.95fr) minmax(0, 2.05fr) !important;
             gap: 4mm !important;
             align-items: start !important;
+            margin-top: 2.5mm !important;
           }
 
           .resume-left-col {
@@ -176,7 +185,7 @@ export function Resume() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-12 resume-header"
           >
             <Link
               to="/"
@@ -277,7 +286,7 @@ export function Resume() {
 
             {/* Professional Summary */}
             <p
-              className="text-muted-foreground"
+              className="text-muted-foreground resume-summary"
               style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "0.9375rem",
