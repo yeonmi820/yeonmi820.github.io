@@ -157,7 +157,7 @@ export function CaseStudyPaper() {
 
                 <div className="my-8 flex justify-center">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1765025585702-2ea86f5d1156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzbm93JTIwZ2xvYmUlMjB3aW50ZXIlMjBtYWdpY2FsfGVufDF8fHx8MTc3NzA2NjQ0NXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/image/ITT_Screen2.jpg"
                     alt="Snow globe illustration"
                     className="rounded-lg max-w-2xl w-full object-cover"
                   />
@@ -169,7 +169,7 @@ export function CaseStudyPaper() {
 
                 <div className="my-8 flex justify-center">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1558008258-ec20a83db196?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBjb29wZXJhdGl2ZSUyMG11bHRpcGxheWVyJTIwdGVhbXdvcmt8ZW58MXx8fHwxNzc3MDY2NDQ4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/image/ITT_Screen1.jpg"
                     alt="Cooperative gaming illustration"
                     className="rounded-lg max-w-2xl w-full object-cover"
                   />
@@ -300,7 +300,7 @@ export function CaseStudyPaper() {
 
                 <div className="my-8 flex justify-center">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1765025585702-2ea86f5d1156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzbm93JTIwZ2xvYmUlMjB3aW50ZXIlMjBtYWdpY2FsfGVufDF8fHx8MTc3NzA2NjQ0NXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/image/ITT_Screen2.jpg"
                     alt="雪球插图"
                     className="rounded-lg max-w-2xl w-full object-cover"
                   />
@@ -312,7 +312,7 @@ export function CaseStudyPaper() {
 
                 <div className="my-8 flex justify-center">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1558008258-ec20a83db196?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBjb29wZXJhdGl2ZSUyMG11bHRpcGxheWVyJTIwdGVhbXdvcmt8ZW58MXx8fHwxNzc3MDY2NDQ4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/image/ITT_Screen1.jpg"
                     alt="合作游戏插图"
                     className="rounded-lg max-w-2xl w-full object-cover"
                   />
