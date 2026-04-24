@@ -156,8 +156,8 @@ export function Resume() {
           }
 
           .px-6 {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
           }
 
           ul {
