@@ -89,11 +89,11 @@ const gamesStaticData = [
     id: 5,
     title: "PHOBOS",
     slug: "phobos",
-    image: "/image/Phobos1.jpg",
+    image: "/image/Phobos1.png",
     hoverImage: "/image/Phobos2.png",
     year: "2025",
     gallery: [
-      "/image/Phobos1.jpg",
+      "/image/Phobos1.png",
       "/image/Phobos2.png"
     ]
   },
