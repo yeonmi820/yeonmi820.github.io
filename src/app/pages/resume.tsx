@@ -48,7 +48,7 @@ export function Resume() {
           }
 
           main {
-            padding-top: 0 !important;
+            padding-top: 8mm !important;
             padding-bottom: 0 !important;
             padding-left: 0 !important;
             padding-right: 0 !important;
@@ -65,7 +65,7 @@ export function Resume() {
             box-sizing: border-box !important;
             padding: 11mm 5mm 6mm 5mm !important;
             margin: 0 auto !important;
-            zoom: 0.92;
+            zoom: 0.96;
             transform-origin: top center;
             background: var(--background) !important;
           }
@@ -156,8 +156,8 @@ export function Resume() {
           }
 
           .px-6 {
-            padding-left: 0.5rem !important;
-            padding-right: 0.5rem !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
           }
 
           ul {
