@@ -20,7 +20,7 @@ export function Resume() {
       <style>{`
         @page {
           size: A4;
-          margin: 8mm;
+          margin: 0;
         }
 
         @media print {
@@ -43,6 +43,8 @@ export function Resume() {
             padding: 0 !important;
             font-size: 11pt !important;
             background: var(--background) !important;
+            width: 100% !important;
+            height: 100% !important;
           }
 
           main {
@@ -52,11 +54,37 @@ export function Resume() {
             padding-right: 0 !important;
           }
 
+          .resume-print-root {
+            background: var(--background) !important;
+          }
+
           .max-w-4xl {
-            max-width: 194mm !important;
+            width: 210mm !important;
+            max-width: 210mm !important;
+            min-height: 297mm !important;
+            box-sizing: border-box !important;
+            padding: 7mm !important;
             margin: 0 auto !important;
             zoom: 0.84;
             transform-origin: top center;
+            background: var(--background) !important;
+          }
+
+          .resume-main-grid {
+            display: grid !important;
+            grid-template-columns: minmax(0, 0.95fr) minmax(0, 2.05fr) !important;
+            gap: 4mm !important;
+            align-items: start !important;
+          }
+
+          .resume-left-col {
+            grid-column: 1 !important;
+            min-width: 0 !important;
+          }
+
+          .resume-right-col {
+            grid-column: 2 !important;
+            min-width: 0 !important;
           }
 
           h1 {
@@ -138,7 +166,7 @@ export function Resume() {
           }
         }
       `}</style>
-      <div className="relative min-h-screen overflow-x-hidden bg-background">
+      <div className="relative min-h-screen overflow-x-hidden bg-background resume-print-root">
         <Navigation />
 
       <main className="pt-32 pb-24 px-6">
@@ -261,13 +289,13 @@ export function Resume() {
           </motion.div>
 
           {/* Main Content Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 resume-main-grid">
             {/* Left Column: Education & Skills */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="md:col-span-1 space-y-10"
+              className="md:col-span-1 space-y-10 resume-left-col"
             >
               {/* Education */}
               <section>
@@ -507,7 +535,7 @@ export function Resume() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="md:col-span-2 space-y-10"
+              className="md:col-span-2 space-y-10 resume-right-col"
             >
               {/* Projects */}
               <section>
