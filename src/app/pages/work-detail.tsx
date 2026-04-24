@@ -266,6 +266,21 @@ export function WorkDetail() {
               >
                 {renderTextWithLinks(game.overview)}
               </div>
+
+              {/* Full Paper Button - Only for Case Study */}
+              {gameStatic.slug === 'case-study' && (
+                <Link
+                  to="/case-study/full-paper"
+                  className="inline-block mt-6 px-6 py-3 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors"
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.9375rem',
+                    fontWeight: 500
+                  }}
+                >
+                  {language === 'en' ? 'Read Full Paper →' : '完整文章 →'}
+                </Link>
+              )}
             </div>
 
             <div>
