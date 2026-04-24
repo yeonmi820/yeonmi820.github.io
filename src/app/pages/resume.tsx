@@ -224,7 +224,7 @@ export function Resume() {
                 }}
               >
                 <ExternalLink className="w-4 h-4" />
-                linkedin.com/in/yeonmi-lkin
+                https://yeonmi820.github.io
               </div>
               <div
                 className="flex items-center gap-2"
@@ -625,7 +625,7 @@ export function Resume() {
                   >
                     {language === "en"
                       ? "A Turn-based Puzzle Game｜Game Designer"
-                      : "回合制解谜游戏｜游戏设计师"}
+                      : "回合制解谜游戏｜游戏设计"}
                   </p>
                   <ul className="list-disc list-outside ml-5 space-y-2">
                     <li
@@ -704,7 +704,7 @@ export function Resume() {
                   >
                     {language === "en"
                       ? "Board Game｜Designer"
-                      : "桌游｜设计师"}
+                      : "桌游｜玩法设计"}
                   </p>
                   <ul className="list-disc list-outside ml-5 space-y-2">
                     <li
