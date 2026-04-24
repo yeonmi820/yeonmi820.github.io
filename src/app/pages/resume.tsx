@@ -20,7 +20,7 @@ export function Resume() {
       <style>{`
         @page {
           size: A4;
-          margin: 12mm;
+          margin: 8mm;
         }
 
         @media print {
@@ -42,6 +42,7 @@ export function Resume() {
             margin: 0 !important;
             padding: 0 !important;
             font-size: 11pt !important;
+            background: var(--background) !important;
           }
 
           main {
@@ -52,7 +53,10 @@ export function Resume() {
           }
 
           .max-w-4xl {
-            max-width: 100% !important;
+            max-width: 194mm !important;
+            margin: 0 auto !important;
+            zoom: 0.84;
+            transform-origin: top center;
           }
 
           h1 {
@@ -126,6 +130,11 @@ export function Resume() {
 
           li {
             margin-bottom: 0.25rem !important;
+          }
+
+          section, .mb-8, .mb-6 {
+            break-inside: avoid;
+            page-break-inside: avoid;
           }
         }
       `}</style>
