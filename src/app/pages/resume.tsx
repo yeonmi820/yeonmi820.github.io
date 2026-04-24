@@ -20,7 +20,7 @@ export function Resume() {
       <style>{`
         @page {
           size: A4;
-          margin: 20mm;
+          margin: 12mm;
         }
 
         @media print {
@@ -41,6 +41,7 @@ export function Resume() {
           body, html {
             margin: 0 !important;
             padding: 0 !important;
+            font-size: 11pt !important;
           }
 
           main {
@@ -52,6 +53,79 @@ export function Resume() {
 
           .max-w-4xl {
             max-width: 100% !important;
+          }
+
+          h1 {
+            font-size: 2rem !important;
+            margin-bottom: 0.25rem !important;
+          }
+
+          h2 {
+            font-size: 1rem !important;
+            margin-top: 0.25rem !important;
+          }
+
+          h3 {
+            font-size: 0.7rem !important;
+            margin-bottom: 0.5rem !important;
+            padding-bottom: 0.25rem !important;
+          }
+
+          h4 {
+            font-size: 0.8rem !important;
+            margin-bottom: 0.25rem !important;
+          }
+
+          p, li, span, div {
+            font-size: 0.75rem !important;
+            line-height: 1.4 !important;
+          }
+
+          .mb-12, .mb-8, .mb-6 {
+            margin-bottom: 0.75rem !important;
+          }
+
+          .space-y-10 > * + * {
+            margin-top: 1.5rem !important;
+          }
+
+          .space-y-4 > * + * {
+            margin-top: 0.5rem !important;
+          }
+
+          .space-y-2 > * + * {
+            margin-top: 0.25rem !important;
+          }
+
+          .gap-12 {
+            gap: 1rem !important;
+          }
+
+          .gap-6 {
+            gap: 0.5rem !important;
+          }
+
+          .gap-4 {
+            gap: 0.25rem !important;
+          }
+
+          .py-12, .py-6, .py-3 {
+            padding-top: 0.25rem !important;
+            padding-bottom: 0.25rem !important;
+          }
+
+          .px-6 {
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+          }
+
+          ul {
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+
+          li {
+            margin-bottom: 0.25rem !important;
           }
         }
       `}</style>
@@ -143,7 +217,7 @@ export function Resume() {
                 gusyancu@student.gu.se
               </div>
               <div
-                className="flex items-center gap-2 print-hide"
+                className="flex items-center gap-2"
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.875rem",
@@ -153,7 +227,7 @@ export function Resume() {
                 linkedin.com/in/yeonmi-lkin
               </div>
               <div
-                className="flex items-center gap-2 print-hide"
+                className="flex items-center gap-2"
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.875rem",
@@ -643,7 +717,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Created an original board game focusing on card- based area control and complex card effect. Integrated seasonal mechanics and resource systems to drive meaningful player decisions and dynamic interactions."
-                        : "创建了一款专注于资源管理和复杂规则逻辑的原创桌游。"}
+                        : "创作了一款原创桌游，专注于区域控制和复杂的卡牌效果。游戏融入了季节机制和资源系统，旨在引导玩家不仅占领区域，还有互相影响区域，促进互动。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -655,7 +729,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Implemented interdependent card abilities with built-in counterplay, enabling players to strategically respond to opponents and creating a self-balancing gameplay system."
-                        : "通过20多次游戏测试迭代纸上原型，以平衡数值系统和玩家参与度。"}
+                        : "实现了相互制衡的卡牌能力，并内置了反制手段，使玩家能够策略性地应对对手，从而创造了一个自我平衡的游戏系统。"}
                     </li>
                   </ul>
                 </div>
