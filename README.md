@@ -1,7 +1,7 @@
 
-  # Create a new feature
+  # Portfolio
 
-  This is a code bundle for Create a new feature. The original project is available at https://www.figma.com/design/HiCo7zRRgX3guHnwnZL8l7/Create-a-new-feature.
+  This is a code bundle for Portfolio Website. The original project is available at https://www.figma.com/design/HiCo7zRRgX3guHnwnZL8l7/Create-a-new-feature.
 
   ## Running the code
 
