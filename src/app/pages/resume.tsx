@@ -808,7 +808,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Bridge System Engineer (Contract)"
-                        : "系统工程师（合同）"}
+                        : "IT工程师"}
                     </h4>
                     <span
                       className="text-muted-foreground"
@@ -832,7 +832,7 @@ export function Resume() {
                   >
                     {language === "en"
                       ? "Samsung SDS | Xi'an, China"
-                      : "三星SDS | 中国西安"}
+                      : "三星数据系统有限公司 | 中国西安"}
                   </p>
                   <ul className="list-disc list-outside ml-5 space-y-2">
                     <li
