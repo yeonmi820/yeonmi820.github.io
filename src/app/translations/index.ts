@@ -19,7 +19,7 @@ export const translations = {
       title: "Selected Work",
       games: [
         {
-          description: "No Comment",
+          description: "Overlay patterns, reveal secrets: A puzzle game of redacted truths.",
           tags: ["Puzzle", "Global GameJam", "Narrative"],
           role: "Game Designer",
           overview:
