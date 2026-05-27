@@ -185,7 +185,7 @@ export const translations = {
       title: "个人项目",
       games: [
         {
-          description: "无可奉告",
+          description: "重叠图案，揭开秘密：一款关于被涂黑真相的解谜游戏。",
           tags: ["解谜", "GGJ", "重叠消除"],
           role: "玩法设计",
           overview:
