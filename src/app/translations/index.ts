@@ -23,7 +23,7 @@ export const translations = {
           tags: ["Puzzle", "Global GameJam", "Narrative"],
           role: "Game Designer",
           overview:
-            "A satirical puzzle game created for Global Game Jam. Playing as a corporate censor, players must use an 'overlap-to-clear' mechanic to manipulate black blocks—strategically redacting critical information from documents to meet the organization's hidden agendas.",
+            "A satirical puzzle game created for Global Game Jam. Playing as a corporate censor, players must use an 'overlap-to-clear' mechanic to manipulate black blocks—strategically redacting critical information from documents to meet the organization's hidden agendas. \n\n https://globalgamejam.org/games/2026/no-comment-0",
           challenges:
             "Teaching the core 'overlap-to-clear' mechanic intuitively through gameplay, minimizing reliance on explicit text tutorials.",
           solution:
