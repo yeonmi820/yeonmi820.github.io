@@ -17,8 +17,8 @@ const gamesStaticData = [
   },
   {
     id: 2,
-    title: "Realms of Seasons",
-    slug: "realms-of-seasons",
+    title: "Realm of Seasons",
+    slug: "realm-of-seasons",
     image: "/image/seasons1.png",
     hoverImage: "/image/seasons2.JPG",
     year: "2025"
