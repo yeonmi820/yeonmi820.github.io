@@ -307,23 +307,23 @@ export const translations = {
       experience: "工作经历",
       educationContent: {
         msc: {
-          degree: "游戏设计与技术硕士",
+          degree: "游戏设计与技术 硕士",
           school: "哥德堡大学",
           location: "瑞典 哥德堡",
           period: "2025 - 至今",
         },
         bsc: {
-          degree: "计算机科学与技术学士",
+          degree: "计算机科学与技术 学士",
           school: "西安电子科技大学",
           location: "中国 西安",
           period: "2019 - 2023",
         },
       },
       skillsContent: {
-        languages: "C++、C#、Python、JavaScript",
-        engines: "Unity、Unreal Engine 5、自定义C++引擎、Git",
+        languages: "中文 – 母语\n韩语 – 母语\n英语 – 流利（IELTS 7.0）",
+        engines: "编程：C、C++、C#\n引擎：Unity、UE5（蓝图）\n图形：OpenGL\n工具：Git、Jira、Trello",
         design:
-          "敏捷开发/Scrum、机制原型设计、关卡设计、PC/桌游设计",
+          "系统化设计、机制原型、试玩与迭代、关卡设计、设计文档、桌游设计、敏捷开发/Scrum",
       },
     },
   },
