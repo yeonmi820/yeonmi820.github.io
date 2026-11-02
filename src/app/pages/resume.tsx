@@ -4,6 +4,8 @@ import {
   Download,
   ArrowLeft,
   MapPin,
+  Mail,
+  ExternalLink,
   Gamepad2,
   MessageCircle,
 } from "lucide-react";
@@ -15,8 +17,10 @@ export function Resume() {
   const { language } = useLanguage();
   const t = translations[language];
   const contact = {
-    game: "https://yeonmi820.itch.io/",
+    email: "gusyancu@student.gu.se",
+    website: "https://yeonmi820.github.io",
     wechat: "Thispage404",
+    itch: "https://yeonmi820.itch.io/",
   };
 
   return (
@@ -263,8 +267,8 @@ export function Resume() {
                   fontSize: "0.875rem",
                 }}
               >
-                <Gamepad2 className="w-4 h-4" />
-                {contact.game}
+                <Mail className="w-4 h-4" />
+                {contact.email}
               </div>
               <div
                 className="flex items-center gap-2"
@@ -273,8 +277,27 @@ export function Resume() {
                   fontSize: "0.875rem",
                 }}
               >
-                <MessageCircle className="w-4 h-4" />
-                {contact.wechat}
+                {language === "zh" ? (
+                  <>
+                    <MessageCircle className="w-4 h-4" />
+                    {contact.wechat}
+                  </>
+                ) : (
+                  <>
+                    <ExternalLink className="w-4 h-4" />
+                    {contact.website}
+                  </>
+                )}
+              </div>
+              <div
+                className="flex items-center gap-2"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.875rem",
+                }}
+              >
+                <Gamepad2 className="w-4 h-4" />
+                {contact.itch}
               </div>
             </div>
 
