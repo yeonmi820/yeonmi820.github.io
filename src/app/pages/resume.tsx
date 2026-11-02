@@ -432,24 +432,12 @@ export function Resume() {
                       {t.resume.languagesSkill}
                     </h4>
                     <ul
-                      className="text-muted-foreground text-sm"
+                      className="text-muted-foreground text-sm whitespace-pre-line"
                       style={{ fontFamily: "var(--font-body)" }}
                     >
-                      <li>
-                        {language === "en"
-                          ? "Chinese — Native"
-                          : "中文 — 母语"}
-                      </li>
-                      <li>
-                        {language === "en"
-                          ? "Korean - Native"
-                          : "韩语 — 母语"}
-                      </li>
-                      <li>
-                        {language === "en"
-                          ? "English — Fluent (IELTS 7.0)"
-                          : "英语 — 流利 (雅思 7.0)"}
-                      </li>
+                      {language === "en"
+                        ? "Chinese — Native\nKorean - Native\nEnglish — Fluent (IELTS 7.0)"
+                        : t.resume.skillsContent.languages}
                     </ul>
                   </div>
 
@@ -474,20 +462,35 @@ export function Resume() {
                         fontSize: "0.875rem",
                       }}
                     >
-                      {language === "en" ? (
-                        <>
-                          Programming: C, C++ <br />
-                          Engines: Unity, UE5 - Editor <br />
-                          Tools: Git, Jira
-                        </>
-                      ) : (
-                        <>
-                          编程：C、C++ <br />
-                          引擎：Unity、UE5 - 编辑器 <br />
-                          工具：Git、Jira
-                        </>
-                      )}
+                      {language === "en"
+                        ? "Programming: C, C++\nEngines: Unity, UE5 - Editor\nTools: Git, Jira"
+                        : t.resume.skillsContent.engines}
                     </div>
+
+                    {language === "zh" && (
+                      <div>
+                        <h4
+                          className="mb-1"
+                          style={{
+                            fontFamily: "var(--font-body)",
+                            fontSize: "0.75rem",
+                            fontWeight: 600,
+                            color: "var(--foreground)",
+                          }}
+                        >
+                          游戏时长
+                        </h4>
+                        <p
+                          className="text-muted-foreground whitespace-pre-line"
+                          style={{
+                            fontFamily: "var(--font-body)",
+                            fontSize: "0.875rem",
+                          }}
+                        >
+                          Valorant: 510h+{"\n"}Apex Legends: 245h+{"\n"}Splatoon 3: 145h+
+                        </p>
+                      </div>
+                    )}
                   </div>
 
                   <div>
@@ -578,6 +581,59 @@ export function Resume() {
                   {t.resume.selectedProjects}
                 </h3>
 
+                {/* Project 1: No Comment */}
+                {language === "zh" && (
+                  <div className="mb-8">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+                      <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1rem", fontWeight: 600, color: "var(--foreground)" }}>
+                        No Comment
+                      </h4>
+                      <span className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", fontWeight: 500 }}>
+                        Global Game Jam 2026 | 48小时 | 5人团队
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground italic mb-3" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem" }}>
+                      讽刺题材解谜游戏（主题：Mask）| 游戏设计师，机制负责人
+                    </p>
+                    <ul className="list-disc list-outside ml-5 space-y-2">
+                      <li className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", lineHeight: "1.6" }}>
+                        主导核心机制：玩家拖动不同形状的黑框覆盖文件，多个黑框重叠的区域会被消除，把“涂黑审查”变成解谜玩法。
+                      </li>
+                      <li className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", lineHeight: "1.6" }}>
+                        将主菜单设计成隐形教程：玩家必须利用重叠规则拼出 START 按钮才能开始游戏。
+                      </li>
+                    </ul>
+                  </div>
+                )}
+
+                {/* Project 2: PHOBOS */}
+                {language === "zh" && (
+                  <div className="mb-8">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+                      <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1rem", fontWeight: 600, color: "var(--foreground)" }}>
+                        PHOBOS
+                      </h4>
+                      <span className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", fontWeight: 500 }}>
+                        48小时 Game Jam | 5人团队
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground italic mb-3" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem" }}>
+                      卡牌叙事太空恐怖游戏 | 游戏设计师 | Spooky Jam 2025 最佳主题奖
+                    </p>
+                    <ul className="list-disc list-outside ml-5 space-y-2">
+                      <li className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", lineHeight: "1.6" }}>
+                        提出核心概念：在星球上搜刮物资修复飞船，同时 San 值（理智）不断下降。
+                      </li>
+                      <li className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", lineHeight: "1.6" }}>
+                        设计数值系统，调校加权卡牌概率，平衡资源获取、San 值损失与恢复。
+                      </li>
+                      <li className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", lineHeight: "1.6" }}>
+                        设计分支剧情树和卡牌触发的恐怖事件（事件文本借助 AI 辅助撰写）。
+                      </li>
+                    </ul>
+                  </div>
+                )}
+
                 {/* Project 1: AVEngine */}
                 <div className="mb-8">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
@@ -626,10 +682,10 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Co-architected the engine's overall modular framework alongside a cross-functional team, establishing a robust foundation for building and integrating diverse subsystems."
-                        : "与小组成员共同架构引擎的整体模块化框架，为构建和集成各种子系统建立了坚实的基础。"}
+                        : "与小组成员共同设计模块化架构，负责实现输入与相机系统，并基于完整引擎 API 开发交付可玩的 3D Demo。"}
                     </li>
                     <li
-                      className="text-muted-foreground"
+                      className={`text-muted-foreground ${language === "zh" ? "hidden" : ""}`}
                       style={{
                         fontFamily: "var(--font-body)",
                         fontSize: "0.875rem",
@@ -641,7 +697,7 @@ export function Resume() {
                         : "设计了输入和相机系统，执行与场景图和渲染管线的复杂跨模块集成，确保精确的视口控制和响应式交互。"}
                     </li>
                     <li
-                      className="text-muted-foreground"
+                      className={`text-muted-foreground ${language === "zh" ? "hidden" : ""}`}
                       style={{
                         fontFamily: "var(--font-body)",
                         fontSize: "0.875rem",
@@ -741,9 +797,7 @@ export function Resume() {
                         color: "var(--foreground)",
                       }}
                     >
-                      {language === "en"
-                        ? "Realm of Seasons"
-                        : "四季王国"}
+                      Realm of Seasons
                     </h4>
                     <span
                       className="text-muted-foreground"
@@ -753,9 +807,7 @@ export function Resume() {
                         fontWeight: 500,
                       }}
                     >
-                      {language === "en"
-                        ? "Tabletop Game"
-                        : "桌游设计"}
+                      {language === "en" ? "Tabletop Game" : "桌面游戏"}
                     </span>
                   </div>
                   <p
@@ -767,7 +819,7 @@ export function Resume() {
                   >
                     {language === "en"
                       ? "Board Game｜Designer"
-                      : "桌游｜玩法设计"}
+                      : "卡牌区域控制桌游 | 设计师"}
                   </p>
                   <ul className="list-disc list-outside ml-5 space-y-2">
                     <li
@@ -780,7 +832,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Created an original board game focusing on card- based area control and complex card effect. Integrated seasonal mechanics and resource systems to drive meaningful player decisions and dynamic interactions."
-                        : "创作了一款原创桌游，专注于区域控制和复杂的卡牌效果。游戏融入了季节机制和资源系统，旨在引导玩家不仅占领区域，还有互相影响区域，促进互动。"}
+                        : "设计区域控制桌游，包含四个不对称的季节阵营；通过 10 次以上试玩，把相互克制的卡牌效果调成自平衡系统。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -792,7 +844,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Implemented interdependent card abilities with built-in counterplay, enabling players to strategically respond to opponents and creating a self-balancing gameplay system."
-                        : "实现了相互制衡的卡牌能力，并内置了反制手段，使玩家能够策略性地应对对手，从而创造了一个自我平衡的游戏系统。"}
+                        : "通过 10 次以上试玩，把相互克制的卡牌效果调成自平衡系统。"}
                     </li>
                   </ul>
                 </div>
@@ -813,6 +865,27 @@ export function Resume() {
                   {t.resume.experience}
                 </h3>
 
+                {language === "zh" && (
+                  <div className="mb-8">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+                      <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1rem", fontWeight: 600, color: "var(--foreground)" }}>
+                        社交媒体内容创作（实习）
+                      </h4>
+                      <span className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem", fontWeight: 500 }}>
+                        2025.05 – 2025.08
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground italic mb-3" style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem" }}>
+                      Sparkler Global Discoveries | 中国 远程
+                    </p>
+                    <ul className="list-disc list-outside ml-5 space-y-2">
+                      <li className="text-muted-foreground" style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", lineHeight: "1.6" }}>
+                        围绕北欧文化与中国少数民族文化主题，策划并撰写公众号文章，剪辑制作短视频内容，同时完成小红书平台相关平面设计工作，有效融合多元文化元素，提升内容传播力与视觉表现力。
+                      </li>
+                    </ul>
+                  </div>
+                )}
+
                 <div>
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
                     <h4
@@ -824,8 +897,8 @@ export function Resume() {
                       }}
                     >
                       {language === "en"
-                        ? "Bridge System Engineer (Contract)"
-                        : "IT工程师"}
+                        ? "Bridge System Engineer"
+                        : "Bridge System Engineer"}
                     </h4>
                     <span
                       className="text-muted-foreground"
@@ -862,7 +935,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Acted as a technical liaison between local teams and Korean HQ, translating technical documentation and facilitating cross-border engineering meetings."
-                        : "担任本地团队与韩国总部之间的技术联络人，翻译技术文档并促进跨境工程会议。"}
+                        : "担任本地团队与韩国总部之间的技术桥梁（翻译技术文档、组织跨国工程会议）；调试并测试全球售后模块（SQL）。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -874,7 +947,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Diagnosed and resolved software system issues for the global after-sales module through code debugging, software testing, and SQL development."
-                        : "通过代码调试、软件测试和SQL开发，诊断并解决全球售后服务模块的软件系统问题。"}
+                        : "对全球客户关于系统运营过程中出现的问题提供支持。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -886,7 +959,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Collaborated directly with developers to troubleshoot live-system operational bugs, ensuring stable and robust support for global end-users."
-                        : "直接与开发人员合作，排查实时系统运行bug，确保为全球最终用户提供稳定可靠的支持。"}
+                        : "与开发配合，共同解决系统运营过程中出现的问题。"}
                     </li>
                   </ul>
                 </div>
