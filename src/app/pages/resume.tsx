@@ -609,7 +609,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Co-architected the engine's overall modular framework alongside a cross-functional team, establishing a robust foundation for building and integrating diverse subsystems."
-                        : "与跨职能团队共同架构引擎的整体模块化框架，为构建和集成各种子系统建立了坚实的基础。"}
+                        : "与小组成员共同架构引擎的整体模块化框架，为构建和集成各种子系统建立了坚实的基础。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -621,7 +621,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Engineered the Input and Camera systems from scratch, executing complex cross-module integration with the Scene Graph and Rendering pipeline to ensure precise viewport control and responsive interactions."
-                        : "从头设计了输入和相机系统，执行与场景图和渲染管线的复杂跨模块集成，确保精确的视口控制和响应式交互。"}
+                        : "设计了输入和相机系统，执行与场景图和渲染管线的复杂跨模块集成，确保精确的视口控制和响应式交互。"}
                     </li>
                     <li
                       className="text-muted-foreground"
@@ -633,7 +633,7 @@ export function Resume() {
                     >
                       {language === "en"
                         ? "Worked closely within a cross-functional team, developing a playable 3D game demo utilizing the complete engine API, demonstrating comprehensive technical understanding of all core modules and validating end-to-end engine stability."
-                        : "在跨职能团队中密切合作，开发了一个使用完整引擎API的可玩3D游戏演示，展示了对所有核心模块的全面技术理解，并验证了端到端引擎稳定性。"}
+                        : "在来自不同国家的小组成员密切合作，开发了一个使用完整引擎API的可玩3D游戏演示。"}
                     </li>
                   </ul>
                 </div>
