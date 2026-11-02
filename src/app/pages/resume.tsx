@@ -8,12 +8,21 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Link } from "react-router";
-import { useLanguage } from "../contexts/LanguageContext";
+import { localizedPath, useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 
 export function Resume() {
   const { language } = useLanguage();
   const t = translations[language];
+  const contact = language === "zh"
+    ? {
+        email: "gusyancu@student.gu.se",
+        微信: "Thispage404",
+      }
+    : {
+        email: "gusyancu@student.gu.se",
+        website: "https://yeonmi820.github.io",
+      };
 
   return (
     <>
@@ -188,7 +197,7 @@ export function Resume() {
             className="mb-12 resume-header"
           >
             <Link
-              to="/"
+              to={localizedPath("/", language)}
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 print-hide"
               style={{
                 fontFamily: "var(--font-body)",
@@ -260,7 +269,7 @@ export function Resume() {
                 }}
               >
                 <Mail className="w-4 h-4" />
-                gusyancu@student.gu.se
+                {contact.email}
               </div>
               <div
                 className="flex items-center gap-2"
@@ -270,7 +279,7 @@ export function Resume() {
                 }}
               >
                 <ExternalLink className="w-4 h-4" />
-                https://yeonmi820.github.io
+                {contact.website}
               </div>
               <div
                 className="flex items-center gap-2"

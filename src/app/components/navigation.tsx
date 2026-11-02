@@ -1,16 +1,18 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router";
-import { useLanguage } from "../contexts/LanguageContext";
+import { Link, useLocation, useNavigate } from "react-router";
+import { localizedPath, useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import { Languages } from "lucide-react";
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === "/" || location.pathname === "/cn";
   const { language, toggleLanguage } = useLanguage();
   const t = translations[language];
+  const homePath = localizedPath("/", language);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +43,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="flex justify-between items-center">
           <Link
-            to="/"
+            to={homePath}
             style={{
               fontFamily: 'var(--font-display)',
               fontSize: '1.25rem',
@@ -73,7 +75,7 @@ export function Navigation() {
                   </button>
                 ))}
                 <Link
-                  to="/resume"
+                  to={localizedPath("/resume", language)}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   style={{
                     fontFamily: 'var(--font-body)',
@@ -86,7 +88,7 @@ export function Navigation() {
               </>
             ) : (
               <Link
-                to="/"
+                to={homePath}
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 style={{
                   fontFamily: 'var(--font-body)',
@@ -99,7 +101,11 @@ export function Navigation() {
             )}
 
             <button
-              onClick={toggleLanguage}
+              onClick={() => {
+                const nextLanguage = language === "en" ? "zh" : "en";
+                toggleLanguage();
+                navigate(localizedPath(location.pathname, nextLanguage));
+              }}
               className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 ml-2"
               style={{
                 fontFamily: 'var(--font-body)',

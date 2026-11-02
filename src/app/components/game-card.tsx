@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Link } from "react-router";
 import { useState } from "react";
+import { localizedPath, useLanguage } from "../contexts/LanguageContext";
 
 interface Game {
   id: number;
@@ -22,6 +23,8 @@ interface GameCardProps {
 
 export function GameCard({ game, index }: GameCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const { language } = useLanguage();
+  const workPath = localizedPath(`/work/${game.slug}`, language);
 
   return (
     <motion.div
@@ -33,7 +36,7 @@ export function GameCard({ game, index }: GameCardProps) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link to={`/work/${game.slug}`} className="block">
+      <Link to={workPath} className="block">
         <div className="mb-6 overflow-hidden rounded relative">
           <motion.div
             whileHover={{ scale: 1.02 }}
@@ -50,7 +53,7 @@ export function GameCard({ game, index }: GameCardProps) {
 
       <div className="space-y-3">
         <div className="flex items-baseline justify-between gap-4">
-          <Link to={`/work/${game.slug}`}>
+          <Link to={workPath}>
             <h3
               className="hover:text-foreground/70 transition-colors cursor-pointer"
               style={{

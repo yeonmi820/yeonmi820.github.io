@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Navigation } from "../components/navigation";
 import { Link } from "react-router";
 import { ArrowLeft } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { localizedPath, useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
@@ -24,7 +24,7 @@ export function CaseStudyPaper() {
             className="mb-12"
           >
             <Link
-              to="/work/case-study"
+              to={localizedPath("/work/case-study", language)}
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem' }}
             >

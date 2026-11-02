@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { useLanguage } from "../contexts/LanguageContext";
+import { localizedPath, useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 
 export function Hero() {
@@ -83,7 +83,7 @@ export function Hero() {
           </button>
 
           <Link
-            to="/resume"
+            to={localizedPath("/resume", language)}
             className="px-8 py-3 border border-border text-foreground rounded hover:bg-muted transition-colors inline-block"
             style={{
               fontFamily: 'var(--font-body)',

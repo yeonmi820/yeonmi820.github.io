@@ -3,7 +3,7 @@ import { Navigation } from "../components/navigation";
 import { useParams, Link } from "react-router";
 import { ArrowLeft } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { useLanguage } from "../contexts/LanguageContext";
+import { localizedPath, useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 
 // 将文本中的URL转换为可点击的链接
@@ -128,7 +128,7 @@ export function WorkDetail() {
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem' }}>
               {language === 'en' ? 'Work not found' : '作品未找到'}
             </h1>
-            <Link to="/" className="text-muted-foreground hover:text-foreground mt-4 inline-block">
+            <Link to={localizedPath("/", language)} className="text-muted-foreground hover:text-foreground mt-4 inline-block">
               {language === 'en' ? 'Back to Home' : '返回首页'}
             </Link>
           </div>
@@ -157,7 +157,7 @@ export function WorkDetail() {
             className="mb-12"
           >
             <Link
-              to="/#work"
+              to={`${localizedPath("/", language)}#work`}
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem' }}
             >
@@ -270,7 +270,7 @@ export function WorkDetail() {
               {/* Full Paper Button - Only for Case Study */}
               {gameStatic.slug === 'case-study' && (
                 <Link
-                  to="/case-study/full-paper"
+                  to={localizedPath("/case-study/full-paper", language)}
                   className="inline-block mt-6 px-6 py-3 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors"
                   style={{
                     fontFamily: 'var(--font-body)',
