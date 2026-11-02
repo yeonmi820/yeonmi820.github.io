@@ -16,8 +16,8 @@ export function Resume() {
   const t = translations[language];
   const contact = language === "zh"
     ? {
-        email: "your.email@example.com",
-        website: "https://your-website.example.com",
+        email: "gusyancu@student.gu.se",
+        微信: "Thispage404",
       }
     : {
         email: "gusyancu@student.gu.se",
